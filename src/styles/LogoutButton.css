@@ -1,0 +1,81 @@
+/* Logout button styles - ظاهر یکپارچه و کاربرپسند برای دکمه خروج */
+.logout-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* فاصله بین آیکن و متن */
+  padding: 0.5rem 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #c0392b; /* رنگ پایه تیره‌تر برای کنتراست بهتر */
+  border: 1px solid rgba(192, 57, 43, 0.95);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 80ms ease, box-shadow 150ms ease, border-color 150ms ease;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  user-select: none;
+}
+
+/* حالت hover فقط برای ماوس/لمس - تغییر مکان در hover باعث حس تعاملی می‌شود */
+.logout-button:hover {
+  background-color: #e74c3c; /* حالت hover کمی روشن‌تر */
+  border-color: rgba(231, 76, 60, 0.95);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.12);
+}
+
+/* حالت فوکوس قابل‌رویت برای کاربرانی که از صفحه‌کلید استفاده می‌کنند - بدون جابه‌جایی */
+.logout-button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.18);
+  outline: none;
+}
+
+.logout-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(231, 76, 60, 0.12);
+}
+
+.logout-button:disabled,
+.logout-button[disabled] {
+  background-color: #f0b3b0;
+  border-color: #f0b3b0;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: not-allowed;
+  opacity: 0.95;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+/* استایل آیکن در داخل دکمه */
+.logout-button .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1em;
+  height: 1.1em;
+}
+
+/* حالت با کنتراست بالا برای دسترس‌پذیری */
+@media (prefers-contrast: more) {
+  .logout-button {
+    background-color: #a52b23;
+    border-color: #a52b23;
+    color: #ffffff;
+    box-shadow: none;
+  }
+}
+
+/* کاهش حرکت برای کاربرانی که این تنظیم را فعال کرده‌اند */
+@media (prefers-reduced-motion: reduce) {
+  .logout-button {
+    transition: none;
+  }
+  .logout-button:hover,
+  .logout-button:active {
+    transform: none;
+    box-shadow: none;
+  }
+}
