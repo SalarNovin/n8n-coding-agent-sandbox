@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه ورود مدرن</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font for beautiful Persian typography -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full border border-gray-100 transform transition-all duration-300 hover:shadow-2xl">
+        <!-- Header & Logo Icon -->
+        <div class="flex flex-col items-center mb-8">
+            <div class="p-4 bg-indigo-50 rounded-2xl text-indigo-600 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                </svg>
+            </div>
+            <h2 class="text-2xl font-black text-gray-800 mb-2">خوش آمدید</h2>
+            <p class="text-sm text-gray-500 text-center">برای دسترسی به حساب کاربری خود، اطلاعات زیر را وارد کنید.</p>
+        </div>
+
+        <!-- Login Form -->
+        <form class="space-y-5" onsubmit="event.preventDefault(); alert('ورود موفقیت‌آمیز شبیه‌سازی شد!');">
+            <!-- Email / Username Input -->
+            <div>
+                <label for="username" class="block text-sm font-bold text-gray-700 mb-2">پست الکترونیک یا نام کاربری</label>
+                <div class="relative">
+                    <input type="text" id="username" name="username" autocomplete="username" placeholder="username@example.com" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all text-left placeholder-gray-400 outline-none pr-10">
+                    <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Password Input -->
+            <div>
+                <label for="password" class="block text-sm font-bold text-gray-700 mb-2">رمز عبور</label>
+                <div class="relative">
+                    <input type="password" id="password" name="password" autocomplete="current-password" placeholder="••••••••" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all text-left placeholder-gray-400 outline-none pr-10">
+                    <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Remember Me & Forgot Password -->
+            <div class="flex items-center justify-between text-sm pt-1">
+                <label class="flex items-center text-gray-600 cursor-pointer select-none">
+                    <input type="checkbox" id="remember_me" name="remember_me" class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 ml-2 h-4 w-4">
+                    مرا به خاطر بسپار
+                </label>
+                <a href="#" class="text-indigo-600 hover:text-indigo-800 transition-colors font-medium">فراموشی رمز عبور؟</a>
+            </div>
+
+            <!-- Modern Login Button -->
+            <button type="submit" class="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-indigo-100 hover:shadow-xl hover:shadow-indigo-200 transition-all duration-150 transform active:scale-[0.98] flex items-center justify-center gap-2">
+                <span>ورود به حساب کاربری</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform rotate-180" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </button>
+        </form>
+
+        <!-- Sign Up Footer Link -->
+        <p class="text-center text-sm text-gray-500 mt-8">
+            هنوز ثبت‌نام نکرده‌اید؟
+            <a href="#" class="text-indigo-600 hover:underline font-bold transition-all">ایجاد حساب جدید</a>
+        </p>
+    </div>
+</body>
+</html>
